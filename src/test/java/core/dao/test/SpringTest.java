@@ -43,7 +43,6 @@ public class SpringTest {
     }
     
     @Test
-    @Transactional
     public void updateUtilisateurOK() {
         Utilisateur u = new Utilisateur("machin", "machin", "machin", "machin", "machin", "machin", "machin", "machin");
         dao.save(u);
@@ -62,7 +61,6 @@ public class SpringTest {
     }
 
     @Test
-    @Transactional
     public void deleteUtilisateurOK() {
         Utilisateur u = new Utilisateur("machin", "machin", "machin", "machin", "machin", "machin", "machin", "machin");
         dao.save(u);
@@ -71,7 +69,7 @@ public class SpringTest {
     }    
     
     @Autowired
-    private VolDAOCrudRepository volDAO;
+    private VolDAOCrupRepository volDAO;
     
     @Test
     public void createVolOK(){

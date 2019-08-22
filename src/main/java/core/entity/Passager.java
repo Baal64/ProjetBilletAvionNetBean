@@ -41,6 +41,15 @@ public class Passager implements Serializable {
     @ManyToMany
     private List<Reservation> reservations = new ArrayList<>();
 
+    public Passager(String nom, String prenom, String nuemroPlace) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.nuemroPlace = nuemroPlace;
+    }
+
+    public Passager() {
+    }
+
     public Long getId() {
         return id;
     }

@@ -54,6 +54,18 @@ public class Vol implements Serializable {
     @ManyToMany
     private List<Reservation> listeVols = new ArrayList<>();
 
+    public Vol(String numeroVol, Date dateDepart, Date dateArrivee, String villeDepart, String villeArrivee, Integer nombrePlacesDisponibles) {
+        this.numeroVol = numeroVol;
+        this.dateDepart = dateDepart;
+        this.dateArrivee = dateArrivee;
+        this.villeDepart = villeDepart;
+        this.villeArrivee = villeArrivee;
+        this.nombrePlacesDisponibles = nombrePlacesDisponibles;
+    }
+
+    public Vol() {
+    }
+    
     public Long getId() {
         return id;
     }

@@ -39,6 +39,14 @@ public class Reservation implements Serializable {
     
     @ManyToOne
     private Utilisateur utilisateur;
+
+    public Reservation(String numeroReservation, Utilisateur utilisateur) {
+        this.numeroReservation = numeroReservation;
+        this.utilisateur = utilisateur;
+    }
+
+    public Reservation() {
+    }
     
     public Long getId() {
         return id;
