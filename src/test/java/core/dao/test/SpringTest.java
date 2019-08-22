@@ -6,9 +6,9 @@
 package core.dao.test;
 
 import core.dao.PassagerDAOCrudRepository;
-import core.dao.ReservationDAOCrudrepository;
+import core.dao.ReservationDAOCrudRepository;
 import core.dao.UtilisateurDAOCrudRepository;
-import core.dao.VolDAOCrudRepository;
+import core.dao.VolDAOCrupRepository;
 import core.entity.Passager;
 import core.entity.Reservation;
 import core.entity.Utilisateur;
@@ -79,7 +79,7 @@ public class SpringTest {
     
     
     @Autowired
-    private ReservationDAOCrudrepository reservationDAO;
+    private ReservationDAOCrudRepository reservationDAO;
     
     @Test
     public void createReservationOK(){
