@@ -5,8 +5,11 @@
  */
 package core.dao.test;
 
+<<<<<<< HEAD
 import core.dao.PassagerDAOCrudRepository;
 import core.dao.ReservationDAOCrudrepository;
+=======
+>>>>>>> master
 import core.dao.UtilisateurDAOCrudRepository;
 import core.dao.VolDAOCrudRepository;
 import core.entity.Passager;
@@ -14,6 +17,7 @@ import core.entity.Reservation;
 import core.entity.Utilisateur;
 import core.entity.Vol;
 import core.spring.SpringConfig;
+import java.util.List;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +33,10 @@ import org.springframework.transaction.annotation.Transactional;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = SpringConfig.class)
 @Rollback(false)
+<<<<<<< HEAD
 @Transactional
+=======
+>>>>>>> master
 public class SpringTest {
     
     @Autowired
@@ -37,12 +44,22 @@ public class SpringTest {
     
     @Test
     public void createUtilisateurOK() {
-        
         Utilisateur u = new Utilisateur("machin", "machin", "machin", "machin", "machin", "machin", "machin", "machin");
         
         dao.save(u);
     }
     
+    @Test
+    @Transactional
+    public void updateUtilisateurOK() {
+        Utilisateur u = new Utilisateur("machin", "machin", "machin", "machin", "machin", "machin", "machin", "machin");
+        dao.save(u);
+        
+        u.setNom("Machin");
+        dao.save(u);
+    }
+    
+<<<<<<< HEAD
     @Autowired
     private PassagerDAOCrudRepository passagerDao;
     
@@ -51,6 +68,16 @@ public class SpringTest {
         Passager p = new  Passager("nom", "prenom", "nuemroPlace");
         passagerDao.save(p);
     }
+=======
+    @Test
+    @Transactional
+    public void deleteUtilisateurOK() {
+        Utilisateur u = new Utilisateur("machin", "machin", "machin", "machin", "machin", "machin", "machin", "machin");
+        dao.save(u);
+        
+        dao.delete(u);
+    }    
+>>>>>>> master
     
     @Autowired
     private VolDAOCrudRepository volDAO;
