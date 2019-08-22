@@ -33,10 +33,7 @@ import org.springframework.transaction.annotation.Transactional;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = SpringConfig.class)
 @Rollback(false)
-<<<<<<< HEAD
 @Transactional
-=======
->>>>>>> master
 public class SpringTest {
     
     @Autowired
@@ -59,7 +56,6 @@ public class SpringTest {
         dao.save(u);
     }
     
-<<<<<<< HEAD
     @Autowired
     private PassagerDAOCrudRepository passagerDao;
     
@@ -68,7 +64,7 @@ public class SpringTest {
         Passager p = new  Passager("nom", "prenom", "nuemroPlace");
         passagerDao.save(p);
     }
-=======
+
     @Test
     @Transactional
     public void deleteUtilisateurOK() {
@@ -77,7 +73,6 @@ public class SpringTest {
         
         dao.delete(u);
     }    
->>>>>>> master
     
     @Autowired
     private VolDAOCrudRepository volDAO;
