@@ -33,7 +33,7 @@ public class Utilisateur implements Serializable {
     @Column(length = 32, nullable = false)
     private String prenom;
     
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String mail;
     
     @Column(nullable = false, length = 32)
