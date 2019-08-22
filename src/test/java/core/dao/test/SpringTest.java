@@ -5,11 +5,8 @@
  */
 package core.dao.test;
 
-<<<<<<< HEAD
 import core.dao.PassagerDAOCrudRepository;
 import core.dao.ReservationDAOCrudrepository;
-=======
->>>>>>> master
 import core.dao.UtilisateurDAOCrudRepository;
 import core.dao.VolDAOCrudRepository;
 import core.entity.Passager;
@@ -17,7 +14,6 @@ import core.entity.Reservation;
 import core.entity.Utilisateur;
 import core.entity.Vol;
 import core.spring.SpringConfig;
-import java.util.List;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
