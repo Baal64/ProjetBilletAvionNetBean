@@ -8,6 +8,7 @@ package core.entity;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -37,12 +38,11 @@ public class Reservation implements Serializable {
     @ManyToMany(mappedBy = "reservations")
     private List<Passager> listePassagers = new ArrayList<>();
     
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private Utilisateur utilisateur;
 
-    public Reservation(String numeroReservation, Utilisateur utilisateur) {
+    public Reservation(String numeroReservation) {
         this.numeroReservation = numeroReservation;
-        this.utilisateur = utilisateur;
     }
 
     public Reservation() {

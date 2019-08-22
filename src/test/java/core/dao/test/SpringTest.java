@@ -14,6 +14,7 @@ import core.entity.Reservation;
 import core.entity.Utilisateur;
 import core.entity.Vol;
 import core.spring.SpringConfig;
+import java.sql.Timestamp;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -73,7 +74,7 @@ public class SpringTest {
     
     @Test
     public void createVolOK(){
-        Vol v = new Vol("numeroVol", "villeDepart", "villeArrivee");
+        Vol v = new Vol("numeroVol", new Timestamp(System.currentTimeMillis()), new Timestamp(System.currentTimeMillis()), "villeDepart", "villeArrivee", 100);
         volDAO.save(v);
     }
     
