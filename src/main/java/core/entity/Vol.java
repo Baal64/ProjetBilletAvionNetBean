@@ -6,7 +6,6 @@
 package core.entity;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -55,7 +54,7 @@ public class Vol implements Serializable {
     @ManyToMany
     private List<Reservation> listeVols = new ArrayList<>();
 
-    public Vol(String numeroVol, Timestamp dateDepart, Timestamp dateArrivee, String villeDepart, String villeArrivee, Integer nombrePlacesDisponibles) {
+    public Vol(String numeroVol, Date dateDepart, Date dateArrivee, String villeDepart, String villeArrivee, Integer nombrePlacesDisponibles) {
         this.numeroVol = numeroVol;
         this.dateDepart = dateDepart;
         this.dateArrivee = dateArrivee;
