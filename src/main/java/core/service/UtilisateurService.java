@@ -18,26 +18,27 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 @Service
 public class UtilisateurService {
+    
     @Autowired
     private UtilisateurDAOCrudRepository utilisateurDao;
     
     public void create(Utilisateur u){
-          
             utilisateurDao.save(u);
     }
     
-    public void modify(Utilisateur u){
-        
+    public void modify(Utilisateur u){  
         utilisateurDao.save(u);
     }
     
-    public void delete(Utilisateur u){
-        
+    public void delete(Utilisateur u){   
         utilisateurDao.delete(u);
     }
     
-    public Utilisateur read(Long l) {
-        return null;
-           
+    public Utilisateur findById(Long id) {   
+        return utilisateurDao.findOne(id);      
+    }
+    
+    public Iterable<Utilisateur> findAll(){
+        return utilisateurDao.findAll();
     }
 }
