@@ -5,41 +5,34 @@
  */
 package core.service.test;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import core.entity.Reservation;
+import core.entity.Utilisateur;
+import core.service.ReservationService;
+import core.spring.SpringConfig;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.Rollback;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
  * @author itsadeki
  */
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = SpringConfig.class)
+@Rollback(false)
+@Transactional
 public class ReservationServiceTest {
     
-    public ReservationServiceTest() {
+    @Autowired
+    private ReservationService reservationService;
+    
+    @Test
+    public void createReservationOK() {
+        reservationService.createReservation(new Reservation("numero", new Utilisateur("default", "default", "default", "default", "default", "default", "default", "default")));
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
 }
