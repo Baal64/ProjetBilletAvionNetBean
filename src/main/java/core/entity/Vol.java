@@ -36,7 +36,7 @@ public class Vol implements Serializable {
     private String numeroVol;
     
     @Column(nullable = false)
-    @Temporal(javax.persistence.TemporalType.DATE)
+    @Temporal(javax.persistence.TemporalType.TIMESTAMP)
     private Date dateDepart;
     
     @Column(nullable = false)

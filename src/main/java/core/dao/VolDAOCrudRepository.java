@@ -12,6 +12,6 @@ import org.springframework.data.repository.CrudRepository;
  *
  * @author alexa
  */
-public interface VolDAOCrupRepository extends CrudRepository<Vol, Long>{
+public interface VolDAOCrudRepository extends CrudRepository<Vol, Long>{
     
 }
