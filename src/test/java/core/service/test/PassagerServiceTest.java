@@ -5,8 +5,8 @@
  */
 package core.service.test;
 
-import core.entity.Utilisateur;
-import core.service.UtilisateurService;
+import core.entity.Passager;
+import core.service.PassagerService;
 import core.spring.SpringConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,14 +24,14 @@ import org.springframework.transaction.annotation.Transactional;
 @ContextConfiguration(classes = SpringConfig.class)
 @Rollback(false)
 @Transactional
-public class UtilisateurServiceTest {
+public class PassagerServiceTest {
     
     @Autowired
-    private UtilisateurService utilisateurService;
-        
-        @Test
-        public void createUtilisateurOK() {
-            utilisateurService.create(new Utilisateur("nom", "prenom", "mail", "motDePasse", "rue", "ville", "codePostal", "telephone"));       
-        }   
+    private PassagerService passagerService;
+    
+    @Test
+    public void PassagerServiceTest() {
+        passagerService.create(new Passager("nom", "prenom", "nuemroPlace") );
+    }
     
 }
