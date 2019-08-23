@@ -21,6 +21,10 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 @Service
 public class ReservationService {
+
+    public static void createResevationVolSimple(Reservation reservation) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     @Autowired
     private ReservationDAOCrudRepository reservationDAO;
@@ -34,8 +38,31 @@ public class ReservationService {
         }
     }
     
-    public void updateReservation(Reservation r) {
-        reservationDAO.save(r);
+    public void createResevationVolSimple(Reservation r, Vol v, List<Passager> p){
+        Integer vol = v.getNombrePlacesDisponibles();
+        Integer nombrePassagersResa = p.size();
+        if (vol >= nombrePassagersResa) {
+            reservationDAO.save(r);
+        }
+    }
+    public void updateReservationAR(Reservation r, Vol vAller, Vol vRetour, List<Passager> p) {
+        Integer vol1 = vAller.getNombrePlacesDisponibles();
+        Integer vol2 = vRetour.getNombrePlacesDisponibles();
+        Integer nombrePassagersResa = p.size();
+        if ((vol1 >= nombrePassagersResa) && (vol2 >= nombrePassagersResa)) {
+           reservationDAO.save(r); 
+        }
+    
+    
+        
+    }
+    
+    public void updatereservationVolSimple(Reservation r, Vol v, List<Passager> p) {
+        Integer vol = v.getNombrePlacesDisponibles();
+        Integer nombrePassagersResa = p.size();
+        if (vol >= nombrePassagersResa){
+            reservationDAO.save(r);
+        }
     }
     
     public void removeReservation(long id) {

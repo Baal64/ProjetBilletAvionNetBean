@@ -5,10 +5,15 @@
  */
 package core.service.test;
 
+import core.entity.Passager;
 import core.entity.Reservation;
 import core.entity.Utilisateur;
+import core.entity.Vol;
 import core.service.ReservationService;
 import core.spring.SpringConfig;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +37,35 @@ public class ReservationServiceTest {
     
     @Test
     public void createReservationOK() {
-        reservationService.createReservation(new Reservation("numero", new Utilisateur("default", "default", "default", "default", "default", "default", "default", "default")));
+        Passager p1 = new Passager("nom", "prenom", "numeroPlace");
+        Passager p2 = new Passager("nom", "prenom", "numeroPlace");
+
+        List<Passager> liste = new ArrayList<>();
+        liste.add(p2);
+        liste.add(p1);
+        
+        reservationService.createResevationVolSimple(
+            new Reservation(
+                "numeroReservation",
+                new Utilisateur("nom",
+                    "prenom",
+                    "mail",
+                    "motDePasse",
+                    "rue",
+                    "ville",
+                    "codePostal",
+                    "telephone")),
+            new Vol(
+                "numeroVol",
+                new Timestamp(System.currentTimeMillis()),
+                new Timestamp(System.currentTimeMillis()),
+                "villeDepart",
+                "villeArrivee",
+                100),
+            liste
+        );
+ 
+
     }
-    
+
 }
