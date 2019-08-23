@@ -8,7 +8,7 @@ package core.service.test;
 import core.entity.Vol;
 import core.service.VolService;
 import core.spring.SpringConfig;
-import java.sql.Timestamp;
+import java.util.Date;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +32,7 @@ public class VolServiceTest {
     
     @Test
     public void createVolOK() {
-        volService.createVol(new Vol("numeroVol", new Timestamp(System.currentTimeMillis()), new Timestamp(System.currentTimeMillis()), "villeDepart", "villeArrivee", 100));
+        volService.createVol(new Vol("numeroVol", new Date(), new Date(), "villeDepart", "villeArrivee", 100));
     }
     
 }
