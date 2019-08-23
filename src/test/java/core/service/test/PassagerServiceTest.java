@@ -31,7 +31,7 @@ public class PassagerServiceTest {
     
     @Test
     public void PassagerServiceTest() {
-        passagerService.create(new Passager("nom", "prenom", "nuemroPlace") );
+        passagerService.create(new Passager("nom", "prenom", "numeroPlace") );
     }
     
 }

@@ -71,6 +71,8 @@ public class Vol implements Serializable {
         return id;
     }
 
+    
+    
     public void setId(Long id) {
         this.id = id;
     }
@@ -98,6 +100,62 @@ public class Vol implements Serializable {
     @Override
     public String toString() {
         return "FilRouge.entity.Vol[ id=" + id + " ]";
+    }
+
+    public String getNumeroVol() {
+        return numeroVol;
+    }
+
+    public void setNumeroVol(String numeroVol) {
+        this.numeroVol = numeroVol;
+    }
+
+    public Date getDateDepart() {
+        return dateDepart;
+    }
+
+    public void setDateDepart(Date dateDepart) {
+        this.dateDepart = dateDepart;
+    }
+
+    public Date getDateArrivee() {
+        return dateArrivee;
+    }
+
+    public void setDateArrivee(Date dateArrivee) {
+        this.dateArrivee = dateArrivee;
+    }
+
+    public String getVilleDepart() {
+        return villeDepart;
+    }
+
+    public void setVilleDepart(String villeDepart) {
+        this.villeDepart = villeDepart;
+    }
+
+    public String getVilleArrivee() {
+        return villeArrivee;
+    }
+
+    public void setVilleArrivee(String villeArrivee) {
+        this.villeArrivee = villeArrivee;
+    }
+
+    public Integer getNombrePlacesDisponibles() {
+        return nombrePlacesDisponibles;
+    }
+
+    public void setNombrePlacesDisponibles(Integer nombrePlacesDisponibles) {
+        this.nombrePlacesDisponibles = nombrePlacesDisponibles;
+    }
+
+    public List<Reservation> getListeVols() {
+        return listeVols;
+    }
+
+    public void setListeVols(List<Reservation> listeVols) {
+        this.listeVols = listeVols;
     }
     
 }

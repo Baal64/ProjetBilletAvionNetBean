@@ -36,19 +36,21 @@ public class Passager implements Serializable {
     private String prenom;
     
     @Column(length = 32, nullable = false)
-    private String nuemroPlace;
+    private String numeroPlace;
     
     @ManyToMany
     private List<Reservation> reservations = new ArrayList<>();
 
-    public Passager(String nom, String prenom, String nuemroPlace) {
+    public Passager(String nom, String prenom, String numeroPlace) {
         this.nom = nom;
         this.prenom = prenom;
-        this.nuemroPlace = nuemroPlace;
+        this.numeroPlace = numeroPlace;
     }
 
     public Passager() {
     }
+    
+    
 
     public Long getId() {
         return id;
@@ -81,6 +83,38 @@ public class Passager implements Serializable {
     @Override
     public String toString() {
         return "FilRouge.entity.Passager[ id=" + id + " ]";
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public String getNumeroPlace() {
+        return numeroPlace;
+    }
+
+    public void setNumeroPlace(String numeroPlace) {
+        this.numeroPlace = numeroPlace;
+    }
+
+    public List<Reservation> getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(List<Reservation> reservations) {
+        this.reservations = reservations;
     }
     
 }
