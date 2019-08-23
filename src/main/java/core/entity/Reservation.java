@@ -41,11 +41,12 @@ public class Reservation implements Serializable {
     @ManyToOne(cascade = CascadeType.PERSIST)
     private Utilisateur utilisateur;
 
-    public Reservation(String numeroReservation) {
-        this.numeroReservation = numeroReservation;
+    public Reservation() {
     }
 
-    public Reservation() {
+    public Reservation(String numeroReservation, Utilisateur utilisateur) {
+        this.numeroReservation = numeroReservation;
+        this.utilisateur = utilisateur;
     }
     
     public Long getId() {
