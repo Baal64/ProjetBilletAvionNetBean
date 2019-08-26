@@ -1,0 +1,294 @@
+/*
+////////////////
+      1270px
+////////////////
+*/
+
+@media only screen and (max-width: 1270px) {
+
+    #header_top_item_facebook {
+        left: 20px;
+    }
+
+    #header_top_item_twitter {
+        left: 52px;
+    }
+
+    #header_top_item_instagram {
+        left: 84px;
+    }
+
+    #header_top_item_offer {
+        left: 116px;
+        width: calc(100% - 280px);
+    }
+
+    #header_top_item_contact {
+        right: 140px;
+    }
+
+    #header_top_item_login {
+        right: 96px;
+    }
+
+    #header_top_item_slash {
+        right: 82px;
+    }
+
+    #header_top_item_register {
+        right: 20px;
+    }
+
+    #header_nav_list_item_logo {
+        left: 20px;
+    }
+
+    #header_nav_list_item_1 {
+        left: 307px;
+    }
+
+    #header_nav_list_item_2 {
+        left: 389px;
+    }
+
+    #header_nav_list_item_3 {
+        left: 471px;
+    }
+
+    #header_nav_list_item_search {
+        right: 20px;
+    }
+
+    .jumbotron_carousel_item_banner_titre {
+        left: 20px;
+    }
+
+    .jumbotron_carousel_item_banner_text {
+        width: calc(100% - 40px);
+        left: 20px;
+    }
+
+    .jumbotron_carousel_item_banner_link_1 {
+        left: 20px;
+    }
+
+    .jumbotron_carousel_item_banner_link_2 {
+        left: 280px;
+    }
+}
+
+
+/*
+////////////////
+      600px
+////////////////
+*/
+
+@media only screen and (max-width: 780px) {
+
+    header {
+        height: 278px;
+    }
+
+    #header_nav {
+        height: 164px;
+    }
+
+    .header_nav_init {
+        top: 114px;
+    }
+
+    #header_top_item_facebook {
+        left: calc((100% - 400px) / 2);
+    }
+
+    #header_top_item_twitter {
+        left: calc(((100% - 400px) / 2) + 32px);
+    }
+
+    #header_top_item_instagram {
+        left: calc(((100% - 400px) / 2) + 64px);
+    }
+
+    #header_top_item_offer {
+        top: 64px;
+        left: 0;
+        width: 100%;
+    }
+
+    #header_top_item_contact {
+        right: calc(((100% - 400px) / 2) + 120px);
+    }
+
+    #header_top_item_login {
+        right: calc(((100% - 400px) / 2) + 76px);
+    }
+
+    #header_top_item_slash {
+        right: calc(((100% - 400px) / 2) + 62px);
+    }
+
+    #header_top_item_register {
+        right: calc((100% - 400px) / 2);
+    }
+
+    #header_nav_list_item_logo {
+        left: calc((100% - 400px) / 2);
+    }
+
+    #header_nav_list_item_1 {
+        top: 80px;
+        left: calc(((100% - 400px) / 2));
+    }
+
+    #header_nav_list_item_2 {
+        top: 80px;
+        left: calc(((100% - 400px) / 2) + 64px);
+    }
+
+    #header_nav_list_item_3 {
+        top: 80px;
+        left: calc(((100% - 400px) / 2) + 128px);
+    }
+
+    #header_nav_list_item_search {
+        top: 80px;
+        right: calc((100% - 400px) / 2);
+    }
+
+    .jumbotron_carousel_item_banner_titre {
+        top: 64px;
+        left: 0;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .jumbotron_carousel_item_banner_strong {
+        left: 20px;
+    }
+
+    .jumbotron_carousel_item_banner_text {
+        left: 0;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .jumbotron_carousel_item_banner_link_1 {
+        top: 380px;
+        left: calc((100% - 400px) / 2);
+    }
+
+    .jumbotron_carousel_item_banner_link_2 {
+        top: 380px;
+        left: initial;
+        right: calc((100% - 400px) / 2);
+    }
+}
+
+
+/*
+////////////////
+      430px
+////////////////
+*/
+
+@media only screen and (max-width: 430px) {
+
+    header {
+        height: 406‬px;
+    }
+
+    #header_nav {
+        height: 218px;
+    }
+
+    .header_nav_init {
+        top: 100px;
+    }
+
+    #header_top_item_facebook {
+        left: 20px;
+    }
+
+    #header_top_item_twitter {
+        left: 52px;
+    }
+
+    #header_top_item_instagram {
+        left: 84px;
+    }
+
+    #header_top_item_offer {
+        top: 64px;
+        left: 0;
+        width: 100%;
+    }
+
+    #header_top_item_contact {
+        right: 140px;
+    }
+
+    #header_top_item_login {
+        right: 98px;
+    }
+
+    #header_top_item_slash {
+        right: 82px;
+    }
+
+    #header_top_item_register {
+        right: 20px;
+    }
+
+    #header_nav_list_item_logo {
+        left: calc((100% - 270px) / 2);
+    }
+
+    #header_nav_list_item_1 {
+        top: 80px;
+        left: 20px;
+    }
+
+    #header_nav_list_item_2 {
+        top: 80px;
+        left: 84px;
+    }
+
+    #header_nav_list_item_3 {
+        top: 80px;
+        left: 148px;
+    }
+
+    #header_nav_list_item_search {
+        top: 144px;
+        left: calc((100% - 270px) / 2);
+    }
+
+    .jumbotron_carousel_item_banner_titre {
+        top: 64px;
+        left: 0;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .jumbotron_carousel_item_banner_strong {
+        left: 20px;
+    }
+
+    .jumbotron_carousel_item_banner_text {
+        left: 0;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .jumbotron_carousel_item_banner_link_1 {
+        top: 380px;
+        left: 20px;
+    }
+
+    .jumbotron_carousel_item_banner_link_2 {
+        top: 380px;
+        left: initial;
+        right: 20px;
+    }
+}

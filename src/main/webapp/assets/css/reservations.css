@@ -1,0 +1,132 @@
+#section_reservation {
+    width: 1200px;
+    margin: auto;
+}
+.section_module{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0px;
+    border-top: rgb(153, 153, 153) solid 1px;
+}
+#section_reservation p{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+#section_reservation_villes_villes {
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+}
+
+#section_reservation_villes_AR_nbPassagers {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#section_reservation_dates {
+    display: flex;
+    justify-content: space-between;
+    width: 240px;
+}
+ #section_reservation_modifier_bouton {
+     width: 176px;
+     height: 42px;
+     border: none;
+     color: #FFF;
+     font-size: 20px;
+     /* font-weight: bold; */
+     background-color: #F5600C;
+     transition-duration: 0.4s;
+ }
+
+ #section_reservation_modifier_bouton:hover {
+    background-color: #FFF;
+    border: 1px solid #F5600C;
+    color: rgba(245, 95, 12, 0.7);
+ }
+
+.section_sous_module {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.section_sous_sous_module {
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+}
+
+.section_reservation_bouton {
+    width: 176px;
+    height: 42px;
+    border: none;
+    color: #FFF;
+    font-size: 20px;
+    background-color: #F5600C;
+    transition-duration: 0.4s;
+}
+
+.section_reservation_bouton:hover {
+   background-color: #FFF;
+   border: 1px solid #F5600C;
+   color: rgba(245, 95, 12, 0.7);
+}
+
+.section_sous_module2 label {
+    display: inline-block;
+    font-weight: bold;
+    width: 80px;
+}
+
+.section_sous_module2 p {
+    margin-bottom: 20px;
+}
+
+.section_reservation_infos_passager_prenom {
+    margin-top: 20px;
+}
+
+/* ========================= Media queries ============================= */
+
+@media only screen and (max-width: 1250px) {
+    
+    #section_reservation{
+        width:100%;
+        padding: 0px 20px;
+    }
+}
+
+@media only screen and (max-width: 975px) {
+
+    .sous_module_infos_vol {
+        margin: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 775px) {
+
+    #section_reservation {
+        min-width: 550px;
+    }
+    
+    #section_reservation_infos_vol_general {
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+    }
+
+    #section_reservation_modifier_bouton {
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    #section_reservation_infos_vol_aller, #section_reservation_infos_vol_retour {
+        flex-wrap: wrap;
+        height: 150px;
+
+    }
+}

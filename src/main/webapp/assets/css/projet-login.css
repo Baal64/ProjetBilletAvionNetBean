@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #17a2b8;
+    height: 100vh;
+}
+.section_login{
+    background-color: white;
+    text-align: center;
+    width: 420px;
+    height: 600px;
+    min-width: 200px;
+    margin: 60px auto;
+    padding: 20px;
+    
+}
+
+
+#login_titre{
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    
+}
+
+.login_soustitre{
+    display:inline;
+    color:#AFBAC3;
+    margin: 4px;
+    font-size: 26px;
+
+    
+    
+}
+.login_soustitre_href{
+    color: #f5600C;
+    
+}
+
+
+
+button{
+    font-family: 'Poppins', sans-serif;
+    color:white;
+    padding:6px 0 6px 0;
+    background:#f5600C;
+    border-style: none;
+	margin: 20px;
+	width:306px;
+	
+} 
+
+
+
+
+
+
+
+.ipd{
+    color: black;
+    border-bottom-style: groove, 4px;
+    border-bottom-color: #f5600C;
+    border-left-style: none;
+    border-right-style: none;
+    border-top-style: none;
+    width: 306px;
+    margin: 10px;
+    
+
+}
+
+
+ ::placeholder{
+     color: #f5600C;
+     opacity : 0.5;
+ }
+
+.label_remenber{
+    font-size: 16px;
+    text-align: left;
+    display: inline-block;
+    margin: 0px;
+    
+}   
+
+ #remenber_me {
+     
+    height: 20px;
+    width: 20px;
+    float: left;
+
+    
+       
+}
+
+.a_mdp{
+    color: #f5600C;    
+    font-size: 12px;
+    text-align: left;
+    margin: 10px;
+    
+    
+}
+
