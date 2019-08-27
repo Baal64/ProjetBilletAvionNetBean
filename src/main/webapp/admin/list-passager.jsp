@@ -6,19 +6,19 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<c:import url="${rootPage}/admin/src/views/header.jsp"></c:import>
+<c:import url="${rootPage}/admin/views/header.jsp"></c:import>
 
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item active">Passager</li>
         <li class="breadcrumb-item active" aria-current="page"><a href="${listPage}">Liste</a></li>
-        <li class="breadcrumb-item active" aria-current="page"><a href="${userPage}">Enregistrement</a></li>
+<!--        <li class="breadcrumb-item active" aria-current="page"><a href="${userPage}">Enregistrement</a></li>-->
     </ol>
 </nav>
 	
 <section class="container">
     <div class="row margin_bottom_16">
-        <form class="form-inline my-2 my-lg-0" action="http://localhost:8080/streaming_web_maven/admin/list-passager" method="Post">
+        <form class="form-inline my-2 my-lg-0" action="${rootPage}admin/list-passager" method="Post">
             <input name="recherche" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
         </form>
@@ -49,4 +49,4 @@
     </div>
 </section>
     
-<c:import url="${rootPage}/admin/src/views/footer.jsp"></c:import>
+<c:import url="${rootPage}/admin/views/footer.jsp"></c:import>

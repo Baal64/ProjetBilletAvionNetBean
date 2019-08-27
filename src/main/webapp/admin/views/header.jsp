@@ -35,7 +35,7 @@
                                     <a class="nav-link" href="vol">Vol <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item margin_right_32">
-                                    <a class="nav-link" href="passager">Passager <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="list-passager">Passager <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item margin_right_32">
                                     <a class="nav-link" href="reservation">Reservation <span class="sr-only">(current)</span></a>

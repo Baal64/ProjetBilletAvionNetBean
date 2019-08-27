@@ -13,7 +13,5 @@ import org.springframework.data.repository.CrudRepository;
  * @author itsadeki
  */
 public interface UtilisateurDAOCrudRepository extends CrudRepository<Utilisateur, Long>{
-    
     public Utilisateur findOneByMail(String mail);
-    
 }

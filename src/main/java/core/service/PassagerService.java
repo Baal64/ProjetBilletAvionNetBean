@@ -38,6 +38,10 @@ public class PassagerService {
         return passagerDao.findOne(id);
     }
     
+    public Iterable<Passager> findByNom(String rechercher) {
+        return passagerDao.findByNom(rechercher); 
+    }
+    
     public Iterable<Passager> findAll() {
         return passagerDao.findAll();
     }

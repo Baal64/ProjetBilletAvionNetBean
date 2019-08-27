@@ -13,5 +13,5 @@ import org.springframework.data.repository.CrudRepository;
  * @author alexa
  */
 public interface PassagerDAOCrudRepository extends  CrudRepository<Passager, Long> {
-    
+    public Iterable<Passager> findByNom(String nom);
 }
