@@ -36,9 +36,9 @@ public class PassagerServlet extends AutowireServlet {
         req.getRequestDispatcher("admin/list-passager.jsp").forward(req, resp);
     }
 
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        
-        req.setAttribute("listePassager", pService.findByNom(req.getParameter("recherche")));
-        req.getRequestDispatcher("admin/list-passager.jsp").forward(req, resp);
-    }
+//    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        
+//        req.setAttribute("listePassager", pService.findByNom(req.getParameter("recherche")));
+//        req.getRequestDispatcher("admin/list-passager.jsp").forward(req, resp);
+//    }
 }

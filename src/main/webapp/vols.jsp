@@ -12,6 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Vol JSP Page</title>
     </head>
+    
     <body>
         <ul>
             <c:forEach items="${listeVols}" var="vol">
@@ -19,7 +20,7 @@
             </c:forEach>
         </ul>
             
-        <form method="post" action="http://localhost:8084/streaming_web_maven/volservlet">
+        <form method="post" action="${routeVol}">
             <label for="numeroVol">Numero de vol :</label><br>
             <input type="text" id="numeroVol" name="numeroVol">
             <br>
