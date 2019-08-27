@@ -31,10 +31,10 @@ public class UserListServlet extends AutowireServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        uService.create(new Utilisateur("SuperUser", "Admin", "itsadeki@gmail.com", "root", "root", "root", "root", "root"));
-//        uService.create(new Utilisateur("test", "test", "test@test.com", "test", "test", "test", "test", "test"));
+        uService.create(new Utilisateur("SuperUser", "Admin", "itsadeki@gmail.com", "root", "root", "root", "root", "root"));
         String userPage = this.rootbase + "admin/user";
         String listPage = this.rootbase + "admin/users";
+        req.setAttribute("rootPage", this.rootbase);
         req.setAttribute("userPage", userPage);
         req.setAttribute("listPage", listPage);
         req.setAttribute("listeUtilisateur", uService.findAll());
