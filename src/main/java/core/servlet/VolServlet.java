@@ -9,7 +9,13 @@ import core.entity.Vol;
 import core.service.VolService;
 import core.spring.AutowireServlet;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -35,11 +41,43 @@ public class VolServlet extends AutowireServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
         
-        Vol v = new Vol(req.getParameter("numeroVol"), new Date(0, 0, 0, 0, 0, 0), new Date(0, 0, 0, 0, 0, 0), req.getParameter("villeDepart"), req.getParameter("villeArrivee"), 100);
+	String dateDepartSaisie = req.getParameter("dateDepart");
+        String dateArriveeSaisie = req.getParameter("dateArrivee");
+        dateDepartSaisie = dateDepartSaisie.replace("T", " ");
+        dateArriveeSaisie = dateArriveeSaisie.replace("T", " ");
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        
+        Date dateDepart = new Date();
+        try {
+            dateDepart = dateFormat.parse(dateDepartSaisie);
+        } catch (ParseException ex) {
+            Logger.getLogger(VolServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        Date dateArrivee = new Date();
+        try {
+            dateArrivee = dateFormat.parse(dateArriveeSaisie);
+        } catch (ParseException ex) {
+            Logger.getLogger(VolServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        String nbrePlaceSaisie = req.getParameter("placeDispo");
+        Integer nbrPlaces = Integer.parseInt(nbrePlaceSaisie);
+                            
+        Vol v = new Vol(
+            req.getParameter("numeroVol"),
+            dateDepart,
+            dateArrivee,
+            req.getParameter("villeDepart"),
+            req.getParameter("villeArrivee"),
+            nbrPlaces
+        );
+        
         vService.createVol(v);
-        resp.sendRedirect("http://localhost:8084/streaming_web_maven/test_vol");
+        resp.sendRedirect("http://localhost:8084/streaming_web_maven/volservlet");
     }
     
    

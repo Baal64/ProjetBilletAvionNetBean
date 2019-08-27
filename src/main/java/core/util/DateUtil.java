@@ -48,5 +48,12 @@ public class DateUtil {
         
         return cal.getTime();
     }
+    
+//    public static Date getFormDate(){
+//        String dateSaisie = "2019-01-01T00:00:00";
+//        String[] strArr = dateSaisie.split("T");
+//        
+//    }
+// 
 
 }

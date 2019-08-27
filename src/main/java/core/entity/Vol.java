@@ -96,11 +96,6 @@ public class Vol implements Serializable {
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "FilRouge.entity.Vol[ id=" + id + " ]";
-    }
-
     public String getNumeroVol() {
         return numeroVol;
     }
@@ -156,5 +151,11 @@ public class Vol implements Serializable {
     public void setListeVols(List<Reservation> listeVols) {
         this.listeVols = listeVols;
     }
+
+    @Override
+    public String toString() {
+        return "Vol{" + "id=" + id + ", numeroVol=" + numeroVol + ", dateDepart=" + dateDepart + ", dateArrivee=" + dateArrivee + ", villeDepart=" + villeDepart + ", villeArrivee=" + villeArrivee + ", nombrePlacesDisponibles=" + nombrePlacesDisponibles + '}';
+    }
+    
     
 }

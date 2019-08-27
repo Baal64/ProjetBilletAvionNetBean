@@ -14,14 +14,14 @@
     </head>
     <body>
         <ul>
-            <c:forEach items="${listeVols}" var="utilisateur">
+            <c:forEach items="${listeVols}" var="vol">
                 <li>${vol}</li>
             </c:forEach>
         </ul>
             
-        <form method="post" action="http://localhost:8084/streaming_web_maven/test_vol.jsp">
+        <form method="post" action="http://localhost:8084/streaming_web_maven/volservlet">
             <label for="numeroVol">Numero de vol :</label><br>
-            <input type="text" id="numeroVol" name="numerVol">
+            <input type="text" id="numeroVol" name="numeroVol">
             <br>
             <label for="dateDepart">Date de départ</label><br>
             <input type="datetime-local" id="dateDepart" name="dateDepart" value = "2019-01-01T00:00:00" >
