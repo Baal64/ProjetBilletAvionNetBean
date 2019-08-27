@@ -33,6 +33,11 @@ public class UserServlet extends AutowireServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 //        req.setAttribute("listeUtilisateur", uService.findAll());
+        String userPage = this.rootbase + "admin/user";
+        String listPage = this.rootbase + "admin/users";
+        req.setAttribute("rootPage", this.rootbase);
+        req.setAttribute("userPage", userPage);
+        req.setAttribute("listPage", listPage);
         req.getRequestDispatcher("post-user.jsp").forward(req, resp);
     }
 
