@@ -13,12 +13,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Admin</title>
-	<link rel="icon" href="src/favicon.ico" />
-	<link rel="icon" type="image/png" href="src/assets/img/icon.png" />
+	<link rel="icon" href="favicon.ico" />
+	<link rel="icon" type="image/png" href="assets/img/icon.png" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="src/assets/css/login.css">
-	<link rel="stylesheet" href="src/assets/css/media.css">
+	<link rel="stylesheet" href="assets/css/login.css">
+	<link rel="stylesheet" href="assets/css/media.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
 
             <!-- Icon -->
             <div class="fadeIn first">
-                <img src="./src/assets/img/icon.png" id="icon" alt="User Icon" class="rounded" />
+                <img src="assets/img/icon.png" id="icon" alt="User Icon" class="rounded" />
             </div>
 
             <!-- Login Form -->
@@ -49,7 +49,7 @@
 
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./src/assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

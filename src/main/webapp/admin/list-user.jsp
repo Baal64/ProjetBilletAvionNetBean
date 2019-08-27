@@ -6,7 +6,7 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<c:import url="${rootPage}/admin/src/views/header.jsp"></c:import>
+<c:import url="${rootPage}admin/views/header.jsp"></c:import>
 
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -51,4 +51,4 @@
     </div>
 </section>
     
-<c:import url="${rootPage}/admin/src/views/footer.jsp"></c:import>
+<c:import url="${rootPage}admin/views/footer.jsp"></c:import>
