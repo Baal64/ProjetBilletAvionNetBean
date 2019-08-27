@@ -52,9 +52,7 @@ public class ReservationService {
         if ((vol1 >= nombrePassagersResa) && (vol2 >= nombrePassagersResa)) {
            reservationDAO.save(r); 
         }
-    
-    
-        
+  
     }
     
     public void updatereservationVolSimple(Reservation r, Vol v, List<Passager> p) {
