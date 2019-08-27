@@ -38,6 +38,10 @@ public class UtilisateurService {
         return utilisateurDao.findOne(id);      
     }
     
+    public Utilisateur findOneByMail(String mail) {   
+        return utilisateurDao.findOneByMail(mail);      
+    }
+    
     public Iterable<Utilisateur> findAll(){
         return utilisateurDao.findAll();
     }

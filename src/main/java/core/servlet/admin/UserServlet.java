@@ -8,6 +8,7 @@ package core.servlet.admin;
 import core.entity.Utilisateur;
 import core.service.UtilisateurService;
 import core.spring.AutowireServlet;
+import core.util.AppUtil;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -26,16 +27,14 @@ public class UserServlet extends AutowireServlet {
 
     @Autowired
     private UtilisateurService uService;
-    
-    private String rootbase = "http://localhost:8084/streaming_web_maven/";
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-//        req.setAttribute("listeUtilisateur", uService.findAll());
-        String userPage = this.rootbase + "admin/user";
-        String listPage = this.rootbase + "admin/users";
-        req.setAttribute("rootPage", this.rootbase);
+        AppUtil.login(req, resp);
+    
+        String userPage = AppUtil.rootbase + "admin/user";
+        String listPage = AppUtil.rootbase + "admin/users";
+        req.setAttribute("rootPage", AppUtil.rootbase);
         req.setAttribute("userPage", userPage);
         req.setAttribute("listPage", listPage);
         req.getRequestDispatcher("post-user.jsp").forward(req, resp);
@@ -46,7 +45,7 @@ public class UserServlet extends AutowireServlet {
         
         Utilisateur u = new Utilisateur(req.getParameter("nom"), req.getParameter("prenom"), req.getParameter("mail"), req.getParameter("motDePasse"), req.getParameter("rue"), req.getParameter("ville"), req.getParameter("codePostal"), req.getParameter("telephone"));
         uService.create(u);
-        resp.sendRedirect(this.rootbase+"admin/users");
+        resp.sendRedirect(AppUtil.rootbase+"admin/users");
     }
     
     

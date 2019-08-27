@@ -8,6 +8,7 @@ package core.service.test;
 import core.entity.Utilisateur;
 import core.service.UtilisateurService;
 import core.spring.SpringConfig;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,20 @@ public class UtilisateurServiceTest {
         @Test
         public void createUtilisateurOK() {
             utilisateurService.create(new Utilisateur("nom", "prenom", "mail", "motDePasse", "rue", "ville", "codePostal", "telephone"));       
+        }   
+        
+        @Test
+        public void findOneByMailOK() {
+            Utilisateur test = new Utilisateur("nom", "prenom", "test", "motDePasse", "rue", "ville", "codePostal", "telephone");
+            utilisateurService.create(test);
+            Utilisateur u = utilisateurService.findOneByMail("test");       
+            
+            Assert.assertEquals(test, u);
+        } 
+        
+        @Test
+        public void findOneByMailKO() {
+            Assert.assertNull(utilisateurService.findOneByMail("ceci_est_un_email_qui_n_existe_pas_en_base"));
         }   
     
 }
