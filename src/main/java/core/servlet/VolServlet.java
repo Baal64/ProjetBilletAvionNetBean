@@ -8,11 +8,10 @@ package core.servlet;
 import core.entity.Vol;
 import core.service.VolService;
 import core.spring.AutowireServlet;
+import core.util.AppUtil;
+import core.util.DateUtil;
 import java.io.IOException;
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.Instant;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -35,8 +34,13 @@ public class VolServlet extends AutowireServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
+        //AppUtil.login(req, resp);
+        
+        String postRoute = AppUtil.rootbase + "volservlet" ;
+        
+        req.setAttribute("routeVol", postRoute);
         req.setAttribute("listeVols", vService.findAll());
-        req.getRequestDispatcher("test_vol.jsp").forward(req, resp);
+        req.getRequestDispatcher("vols.jsp").forward(req, resp);
 
     }
 
@@ -46,20 +50,17 @@ public class VolServlet extends AutowireServlet {
         
 	String dateDepartSaisie = req.getParameter("dateDepart");
         String dateArriveeSaisie = req.getParameter("dateArrivee");
-        dateDepartSaisie = dateDepartSaisie.replace("T", " ");
-        dateArriveeSaisie = dateArriveeSaisie.replace("T", " ");
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         
         Date dateDepart = new Date();
         try {
-            dateDepart = dateFormat.parse(dateDepartSaisie);
+            dateDepart = DateUtil.stringToDate(dateDepartSaisie);
         } catch (ParseException ex) {
             Logger.getLogger(VolServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         Date dateArrivee = new Date();
         try {
-            dateArrivee = dateFormat.parse(dateArriveeSaisie);
+            dateArrivee = DateUtil.stringToDate(dateArriveeSaisie);
         } catch (ParseException ex) {
             Logger.getLogger(VolServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -76,8 +77,9 @@ public class VolServlet extends AutowireServlet {
             nbrPlaces
         );
         
+        String route = AppUtil.rootbase + "volservlet";
         vService.createVol(v);
-        resp.sendRedirect("http://localhost:8084/streaming_web_maven/volservlet");
+        resp.sendRedirect(route);
     }
     
    

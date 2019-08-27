@@ -7,6 +7,7 @@ package core.util;
 
 import java.util.Date;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -49,11 +50,12 @@ public class DateUtil {
         return cal.getTime();
     }
     
-//    public static Date getFormDate(){
-//        String dateSaisie = "2019-01-01T00:00:00";
-//        String[] strArr = dateSaisie.split("T");
-//        
-//    }
-// 
-
+    public static Date stringToDate(String dateSaisie) throws ParseException{
+        
+        dateSaisie = dateSaisie.replace("T", " ");
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        Date date = dateFormat.parse(dateSaisie);
+        
+        return date;
+    }
 }

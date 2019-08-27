@@ -34,14 +34,14 @@ public class ListPassagerServlet extends AutowireServlet {
         
     }
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String recherche = req.getParameter("recherche");
-        
-        List<Passager> resultatNom = service.findByNom(recherche);
-        
-        req.setAttribute("passagers", resultatNom);  
-        req.getRequestDispatcher("/admin/list-passager.jsp").forward(req, resp);
-    }
+//    @Override
+//    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        String recherche = req.getParameter("recherche");
+//        
+//        List<Passager> resultatNom = service.findByNom(recherche);
+//        
+//        req.setAttribute("passagers", resultatNom);  
+//        req.getRequestDispatcher("/admin/list-passager.jsp").forward(req, resp);
+//    }
     
 }
