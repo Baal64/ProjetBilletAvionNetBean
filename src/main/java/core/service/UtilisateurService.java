@@ -22,6 +22,35 @@ public class UtilisateurService {
     @Autowired
     private UtilisateurDAOCrudRepository utilisateurDao;
     
+    public void inscription(Utilisateur u){
+        // validation des champs 
+        if( u.getNom().length()<5 ){
+            throw new RuntimeException(
+                    "identifiant doit contenir au moins 5 charactères");
+        }
+        // Erreur si mail != @
+        if ( u.getMail().contains("@")== false){
+            throw new RuntimeException("e-mail invalide");
+        }
+        if(u.getMotDePasse().length()<5){
+            throw new RuntimeException(
+                    "mdp doit contenir au moins 5 charactères");
+        }
+        
+        // Erreur si identifiant existant
+        if (utilisateurDao.findOneByNom(u.getNom())!= null){
+            throw new RuntimeException("identifiant déja pris");    
+        }
+        // Erreur si mail existant
+        if (utilisateurDao.findOneByMail(u.getMail())!= null){
+            throw new RuntimeException("mail deja existant");
+        }
+        
+        //enregistre utilisateur
+        
+        utilisateurDao.save(u);
+       
+    }
     public void create(Utilisateur u){
             utilisateurDao.save(u);
     }

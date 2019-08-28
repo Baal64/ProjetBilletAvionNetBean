@@ -5,6 +5,7 @@
  */
 package core.servlet;
 
+import core.entity.Utilisateur;
 import core.service.UtilisateurService;
 import core.spring.AutowireServlet;
 import java.io.IOException;
@@ -26,6 +27,32 @@ public class RegisterServlet extends AutowireServlet {
     @Autowired
     private UtilisateurService uService;
 
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
+        Utilisateur u = new Utilisateur();
+        
+        // récup champs remplis
+        u.setNom(req.getParameter("nom"));
+        u.setPrenom(req.getParameter("prenom"));
+        u.setMail(req.getParameter("mail"));
+        u.setTelephone(req.getParameter("tel"));
+        u.setRue(req.getParameter("rue"));
+        u.setVille(req.getParameter("ville"));
+        u.setCodePostal(req.getParameter("cp"));
+        u.setMotDePasse(req.getParameter("mdp1"));
+        // comparer les 2 mdp
+        if ( u.getMotDePasse().equals(req.getParameter("mdp2"))!= true) {
+            throw new RuntimeException("les mots de passes doivent être identique");
+            
+        }
+        
+        // Enreg
+        uService.inscription(u);
+    }
+    
+    
+    
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
