@@ -51,7 +51,7 @@ public class LoginServlet extends AutowireServlet {
         else {
             if (emailUser.getMotDePasse().equals(req.getParameter("loginPassword"))) {
                 req.getSession().setAttribute("login", "true");
-                resp.sendRedirect(AppUtil.rootbase+"admin/users");
+                resp.sendRedirect(AppUtil.rootbase+"admin/list-utilisateur");
             } else {
                 resp.sendRedirect(AppUtil.rootbase+"admin/");
             }

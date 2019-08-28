@@ -26,7 +26,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  *
  * @author alexa
  */
-@WebServlet(name = "VolServlet", urlPatterns = {"/admin/vols"})
+@WebServlet(name = "VolServlet", urlPatterns = {"/admin/list-vol"})
 public class ListVolServlet extends AutowireServlet {
 
     @Autowired
@@ -37,12 +37,12 @@ public class ListVolServlet extends AutowireServlet {
         
         //AppUtil.login(req, resp);
         
-        String postRoute = AppUtil.rootbase + "/admin/vols" ;
+        String postRoute = AppUtil.rootbase + "/admin/create-vol" ;
         
         req.setAttribute("rootPage", AppUtil.rootbase);
         req.setAttribute("routeVol", postRoute);
         req.setAttribute("listeVols", vService.findAll());
-        req.getRequestDispatcher("list-vols.jsp").forward(req, resp);
+        req.getRequestDispatcher("list-vol.jsp").forward(req, resp);
 
     }
 }

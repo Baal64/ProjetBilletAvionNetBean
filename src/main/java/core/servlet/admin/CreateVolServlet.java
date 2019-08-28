@@ -26,8 +26,8 @@ import org.springframework.beans.factory.annotation.Autowired;
  *
  * @author alexa
  */
-@WebServlet(name = "VolServlet", urlPatterns = {"/admin/vol"})
-public class VolServlet extends AutowireServlet {
+@WebServlet(name = "VolServlet", urlPatterns = {"/admin/create-vol"})
+public class CreateVolServlet extends AutowireServlet {
 
     @Autowired
     private VolService vService;
@@ -37,12 +37,12 @@ public class VolServlet extends AutowireServlet {
         
         //AppUtil.login(req, resp);
         
-        String postRoute = AppUtil.rootbase + "/admin/vol" ;
+        String postRoute = AppUtil.rootbase + "/admin/create-vol" ;
         
         req.setAttribute("rootPage", AppUtil.rootbase);
         req.setAttribute("routeVol", postRoute);
         req.setAttribute("listeVols", vService.findAll());
-        req.getRequestDispatcher("post-vols.jsp").forward(req, resp);
+        req.getRequestDispatcher("create-vol.jsp").forward(req, resp);
 
     }
 
@@ -57,14 +57,14 @@ public class VolServlet extends AutowireServlet {
         try {
             dateDepart = DateUtil.stringToDate(dateDepartSaisie);
         } catch (ParseException ex) {
-            Logger.getLogger(VolServlet.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CreateVolServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         Date dateArrivee = new Date();
         try {
             dateArrivee = DateUtil.stringToDate(dateArriveeSaisie);
         } catch (ParseException ex) {
-            Logger.getLogger(VolServlet.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CreateVolServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         String nbrePlaceSaisie = req.getParameter("placeDispo");
@@ -79,7 +79,7 @@ public class VolServlet extends AutowireServlet {
             nbrPlaces
         );
         
-        String route = AppUtil.rootbase + "/admin/vols";
+        String route = AppUtil.rootbase + "/admin/list-vol";
         vService.createVol(v);
         resp.sendRedirect(route);
     }    

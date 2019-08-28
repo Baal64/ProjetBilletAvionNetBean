@@ -22,8 +22,8 @@ import org.springframework.beans.factory.annotation.Autowired;
  *
  * @author itsadeki
  */ 
-@WebServlet(name = "UserServlet", urlPatterns = {"/admin/user"})
-public class UserServlet extends AutowireServlet {
+@WebServlet(name = "UserServlet", urlPatterns = {"/admin/create-utilisateur"})
+public class CreateUtilisateurServlet extends AutowireServlet {
 
     @Autowired
     private UtilisateurService uService;
@@ -37,7 +37,7 @@ public class UserServlet extends AutowireServlet {
         req.setAttribute("rootPage", AppUtil.rootbase);
         req.setAttribute("userPage", userPage);
         req.setAttribute("listPage", listPage);
-        req.getRequestDispatcher("post-user.jsp").forward(req, resp);
+        req.getRequestDispatcher("create-utilisateur.jsp").forward(req, resp);
     }
 
     @Override
@@ -45,7 +45,7 @@ public class UserServlet extends AutowireServlet {
         
         Utilisateur u = new Utilisateur(req.getParameter("nom"), req.getParameter("prenom"), req.getParameter("mail"), req.getParameter("motDePasse"), req.getParameter("rue"), req.getParameter("ville"), req.getParameter("codePostal"), req.getParameter("telephone"));
         uService.create(u);
-        resp.sendRedirect(AppUtil.rootbase+"admin/users");
+        resp.sendRedirect(AppUtil.rootbase+"admin/list-utilisateur");
     }
     
     
