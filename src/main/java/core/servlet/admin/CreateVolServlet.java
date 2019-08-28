@@ -5,7 +5,6 @@
  */
 package core.servlet.admin;
 
-import core.servlet.*;
 import core.entity.Vol;
 import core.service.VolService;
 import core.spring.AutowireServlet;
@@ -33,7 +32,8 @@ public class CreateVolServlet extends AutowireServlet {
     private VolService vService;
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
         
         //AppUtil.login(req, resp);
         
@@ -79,7 +79,7 @@ public class CreateVolServlet extends AutowireServlet {
             nbrPlaces
         );
         
-        String route = AppUtil.rootbase + "/admin/list-vol";
+        String route = AppUtil.rootbase + "/admin/create-vol";
         vService.createVol(v);
         resp.sendRedirect(route);
     }    

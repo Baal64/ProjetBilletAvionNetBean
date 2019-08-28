@@ -11,16 +11,11 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item active">Vol</li>
-        <li class="breadcrumb-item active" aria-current="page"><a href="${rootPage}/admin/vols"">Liste</a></li>
-        <li class="breadcrumb-item active" aria-current="page"><a href="${rootPage}/admin/vol"">Enregistrement</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><a href="${rootPage}/admin/vols">Liste</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><a href="${rootPage}/admin/vol">Enregistrement</a></li>
     </ol>
 </nav>
 <section class="container">
-        <ul>
-            <c:forEach items="${listeVols}" var="vol">
-                <li>${vol}</li>
-            </c:forEach>
-        </ul>
             
         <form method="post" action="${routeVol}">
             <label for="numeroVol">Numero de vol :</label><br>
@@ -43,6 +38,18 @@
             <br>
             <button>Submit</button>
         </form>
+           
+        <ul>
+            <c:forEach items="${listeVols}" var="vol">
+                <li>${vol.numeroVol}</li>
+                <li>${vol.nombrePlacesDisponibles}</li>
+                <li>${vol.dateDepart}</li>
+                <li>${vol.dateArrivee}</li>
+                <li>${vol.villeDepart}</li>
+                <li>${vol.villeArrivee}</li>
+                <br>
+            </c:forEach>
+        </ul>
 
 </section>
 
