@@ -4,6 +4,7 @@
     Author     : itsadeki
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="fr">
@@ -11,7 +12,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="./assets/css/projet-login.css">
+        <link rel="stylesheet" href="<c:url value="/assets/css/projet-login.css"/>">
         <meta name="viewport" content="width=device-width"/>
 
         <title>register</title>
@@ -38,7 +39,7 @@
                 </p>
 
                 <p >
-                    <input name="mail" class="ipd" type="text" data-new-placeholder="E-mail" placeholder="E-mail">
+                    <input name="mail" class="ipd" type="email" data-new-placeholder="E-mail" placeholder="E-mail">
                 </p>
 
                 <p >
