@@ -3,6 +3,9 @@
   <persistence-unit name="PU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>core.entity.Utilisateur</class>
+    <class>core.entity.Passager</class>
+    <class>core.entity.Reservation</class>
+    <class>core.entity.Vol</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/filrouge"/>

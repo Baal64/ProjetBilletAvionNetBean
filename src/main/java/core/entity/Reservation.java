@@ -53,14 +53,44 @@ public class Reservation implements Serializable {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-    
-    
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getNumeroReservation() {
+        return numeroReservation;
+    }
+
+    public void setNumeroReservation(String numeroReservation) {
+        this.numeroReservation = numeroReservation;
+    }
+
+    public List<Vol> getListeReservations() {
+        return listeReservations;
+    }
+
+    public void setListeReservations(List<Vol> listeReservations) {
+        this.listeReservations = listeReservations;
+    }
+
+    public List<Passager> getListePassagers() {
+        return listePassagers;
+    }
+
+    public void setListePassagers(List<Passager> listePassagers) {
+        this.listePassagers = listePassagers;
+    }
+
+    public Utilisateur getUtilisateur() {
+        return utilisateur;
+    }
+
+    public void setUtilisateur(Utilisateur utilisateur) {
+        this.utilisateur = utilisateur;
     }
 
     @Override
@@ -85,7 +115,7 @@ public class Reservation implements Serializable {
 
     @Override
     public String toString() {
-        return "FilRouge.entity.Reservation[ id=" + id + " ]";
+        return "Reservation{" + "id=" + id + ", numeroReservation=" + numeroReservation + ", utilisateur=" + utilisateur + '}';
     }
     
 }
