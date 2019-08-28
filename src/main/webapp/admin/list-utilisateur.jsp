@@ -42,7 +42,8 @@
                         <td>${utilisateur.prenom}</td>
                         <td>${utilisateur.mail}</td>
                         <td>
-                            <a class="btn btn-primary" href="#" role="button">Modifier</a>
+                            <a name="Modif" class="btn btn-primary" href="#" role="button">Modifier</a>
+                            <a name="supr" class="btn btn-primary" href="#" role="button">Suprimer</a>
                         </td>
                     </tr>
                 </c:forEach>

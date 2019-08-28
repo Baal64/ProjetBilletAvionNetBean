@@ -22,7 +22,8 @@ public class UtilisateurService {
     @Autowired
     private UtilisateurDAOCrudRepository utilisateurDao;
     
-    public void inscription(Utilisateur u){
+   
+    public void create(Utilisateur u){
         // validation des champs 
         if( u.getNom().length()<5 ){
             throw new RuntimeException(
@@ -48,10 +49,6 @@ public class UtilisateurService {
         
         //enregistre utilisateur
         
-        utilisateurDao.save(u);
-       
-    }
-    public void create(Utilisateur u){
             utilisateurDao.save(u);
     }
     

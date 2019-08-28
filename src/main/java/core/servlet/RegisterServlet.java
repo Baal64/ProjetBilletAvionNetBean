@@ -48,7 +48,7 @@ public class RegisterServlet extends AutowireServlet {
         }
         
         // Enreg
-        uService.inscription(u);
+        uService.create(u);
     }
     
     
