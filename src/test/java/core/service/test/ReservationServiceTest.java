@@ -28,7 +28,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = SpringConfig.class)
-@Rollback(false)
+@Rollback(true)
 @Transactional
 public class ReservationServiceTest {
     
