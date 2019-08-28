@@ -21,7 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  *
  * @author itsadeki
  */
-@WebServlet(name = "HomepageServlet", urlPatterns = {"/"})
+@WebServlet(name = "HomepageServlet", urlPatterns = {"/home"})
 public class HomepageServlet extends AutowireServlet {
 
     @Autowired
