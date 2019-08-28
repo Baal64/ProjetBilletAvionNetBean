@@ -30,7 +30,7 @@ public class UserServlet extends AutowireServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        AppUtil.login(req, resp);
+        //AppUtil.login(req, resp);
     
         String userPage = AppUtil.rootbase + "admin/user";
         String listPage = AppUtil.rootbase + "admin/users";

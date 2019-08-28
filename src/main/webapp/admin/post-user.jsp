@@ -10,7 +10,7 @@
 
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item active">Utilisateur</li>
+        <li class="breadcrumb-item active">Vols</li>
         <li class="breadcrumb-item active" aria-current="page"><a href="${listPage}">Liste</a></li>
         <li class="breadcrumb-item active" aria-current="page"><a href="${userPage}">Enregistrement</a></li>
     </ol>
