@@ -28,7 +28,7 @@
         <a class="login_soustitre_href" href="./register">S'inscrire : </a>
 
         <p>
-            <input class="ipd" type="text" data-new-placeholder="Identifiant ou E-mail"
+            <input class="ipd" type="text" data-new-placeholder="E-mail"
                 placeholder="Identifiant ou E-mail">
         </p>
         <p>
