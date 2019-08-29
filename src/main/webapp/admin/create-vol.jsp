@@ -25,7 +25,7 @@
                         <fieldset>
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Numero de vol</label>
-                                <div class="col-md-8 inputGroupContainer">
+                                <div class="inputGroupContainer">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="fas fa-plane"></i>
@@ -37,7 +37,7 @@
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Date de départ</label>
-                                <div class="col-md-8 inputGroupContainer">
+                                <div class="inputGroupContainer">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="fas fa-calendar-alt"></i>
@@ -49,7 +49,7 @@
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Date d'arrivée</label>
-                                <div class="col-md-8 inputGroupContainer">
+                                <div class="inputGroupContainer">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="fas fa-calendar-alt"></i>
@@ -61,7 +61,7 @@
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Ville de départ</label>
-                                <div class="col-md-8 inputGroupContainer">
+                                <div class="inputGroupContainer">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="fas fa-plane-departure"></i>
@@ -73,7 +73,7 @@
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Ville d'arrivée</label>
-                                <div class="col-md-8 inputGroupContainer">
+                                <div class="inputGroupContainer">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="fas fa-plane-arrival"></i>
@@ -85,7 +85,7 @@
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Nombre de places disponibles</label>
-                                <div class="col-md-8 inputGroupContainer">
+                                <div class="inputGroupContainer">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="fas fa-users"></i>
@@ -96,8 +96,8 @@
                             </div>
 
                             <div class="form-group">
-                                <div class="inputGroupContainer">
-                                    <button class="btn btn-success center-block">Enregistrer</button>
+                                <div class="inputGroupContainer row justify-content-center">
+                                    <button class="btn btn-success col-2">Enregistrer</button>
                                 </div>
                             </div>
                         </fieldset>
