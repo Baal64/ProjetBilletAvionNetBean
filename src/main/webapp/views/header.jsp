@@ -19,7 +19,9 @@
         <link rel="stylesheet" href="./assets/css/header.css">
         <link rel="stylesheet" href="./assets/css/footer.css">
         <link rel="stylesheet" href="./assets/css/jumbotron.css">
+        <link rel="stylesheet" href="./assets/css/list-vol.css">
         <link rel="stylesheet" href="./assets/css/media.css">
+        <link rel="stylesheet" href="./assets/css/reservations.css">
     </head>
 
     <body>
@@ -64,6 +66,7 @@
                     <li id="header_nav_list_item_logo" class="header_nav_list_item">
                         <a href=""></a>
                     </li>
+<!--                    
                     <li id="header_nav_list_item_1" class="header_nav_list_item">
                         <a class="header_nav_list_link" href="">home</a>
                     </li>
@@ -73,8 +76,9 @@
                     <li id="header_nav_list_item_3" class="header_nav_list_item">
                         <a class="header_nav_list_link" href="">home</a>
                     </li>
+-->
                     <li id="header_nav_list_item_search">
-                        <a href="">
+                        <a href="./list-vol">
                             Planifier un Vol <ion-icon name="airplane"></ion-icon>
                         </a>
                     </li>

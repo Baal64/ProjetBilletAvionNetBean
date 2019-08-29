@@ -47,11 +47,16 @@ public class UtilisateurService {
 //            throw new RuntimeException("mail deja existant");
 //        }
         
-        //enregistre utilisateur
-        
-        utilisateurDao.save(u);
+        // Erreur si identifiant existant
+        if (utilisateurDao.findOneByNom(u.getNom())!= null){
+            throw new RuntimeException("identifiant déja pris");    
+        }
+        // Erreur si mail existant
+        if (utilisateurDao.findOneByMail(u.getMail())!= null){
+            throw new RuntimeException("mail deja existant");
+        }
     }
-    
+        
     public void modify(Utilisateur u){  
         utilisateurDao.save(u);
     }

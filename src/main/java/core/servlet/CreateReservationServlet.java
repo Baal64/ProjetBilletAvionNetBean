@@ -5,10 +5,8 @@
  */
 package core.servlet;
 
-import core.entity.Passager;
-import core.entity.Utilisateur;
-import core.service.PassagerService;
 import core.service.UtilisateurService;
+import core.service.VolService;
 import core.spring.AutowireServlet;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -21,24 +19,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  *
- * @author Formation
+ * @author itsadeki
  */
-@WebServlet(name = "PassagerServlet", urlPatterns = {"/passager"})
-public class PassagerServlet extends AutowireServlet {
-    
+@WebServlet(name = "ReservationClientServlet", urlPatterns = {"/create-reservation"})
+public class CreateReservationServlet extends AutowireServlet {
+
     @Autowired
-    private PassagerService pService;
+    private VolService vService;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        req.setAttribute("listePassager", pService.findAll());
-        req.getRequestDispatcher("admin/list-passager.jsp").forward(req, resp);
+        
+        req.setAttribute("vol", vService.findById(Long.parseLong(req.getParameter("idVol"))));
+        req.getRequestDispatcher("create-reservation.jsp").forward(req, resp);
     }
 
-//    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        
-//        req.setAttribute("listePassager", pService.findByNom(req.getParameter("recherche")));
-//        req.getRequestDispatcher("admin/list-passager.jsp").forward(req, resp);
-//    }
 }

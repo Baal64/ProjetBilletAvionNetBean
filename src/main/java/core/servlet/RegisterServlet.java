@@ -8,6 +8,7 @@ package core.servlet;
 import core.entity.Utilisateur;
 import core.service.UtilisateurService;
 import core.spring.AutowireServlet;
+import core.util.AppUtil;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -26,6 +27,14 @@ public class RegisterServlet extends AutowireServlet {
 
     @Autowired
     private UtilisateurService uService;
+    
+    
+    
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
+         req.getRequestDispatcher("register.jsp").forward(req, resp); 
+    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -52,13 +61,4 @@ public class RegisterServlet extends AutowireServlet {
         resp.sendRedirect("/app/home");
         
     }
-    
-    
-    
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        
-        req.getRequestDispatcher("register.jsp").forward(req, resp);
-    }
-
 }
