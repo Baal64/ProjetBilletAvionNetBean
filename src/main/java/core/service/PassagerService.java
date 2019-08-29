@@ -34,6 +34,10 @@ public class PassagerService {
         passagerDao.delete(p);
     }
     
+    public void delete(Long p) {
+        passagerDao.delete(p);
+    }
+    
     public Passager findById(Long id) {
         return passagerDao.findOne(id);
     }

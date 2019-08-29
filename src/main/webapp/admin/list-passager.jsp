@@ -40,7 +40,7 @@
                         <td>${passager.nom}</td>
                         <td>${passager.prenom}</td>
                         <td>
-                            <a class="btn btn-primary" href="#" role="button">Modifier</a>
+                            <a class="btn btn-danger" href="${rootPage}admin/delete-passager?idPassager=${passager.id}" role="button">Supprimmer</a>
                         </td>
                     </tr>
                 </c:forEach>

@@ -41,7 +41,7 @@
                         <td>${reservation.numeroReservation}</td>
                         <td>${reservation.numeroReservation}</td>
                         <td>
-                            <a class="btn btn-primary" href="#" role="button">Modifier</a>
+                            <a class="btn btn-danger" href="${rootPage}admin/delete-reservation?idReservation=${reservation.id}" role="button">Supprimer</a>
                         </td>
                     </tr>
                 </c:forEach>

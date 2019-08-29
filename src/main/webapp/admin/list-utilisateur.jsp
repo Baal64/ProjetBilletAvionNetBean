@@ -42,8 +42,7 @@
                         <td>${utilisateur.prenom}</td>
                         <td>${utilisateur.mail}</td>
                         <td>
-                            <a name="Modif" class="btn btn-primary" href="#" role="button">Modifier</a>
-                            <a name="supr" class="btn btn-primary" href="#" role="button">Suprimer</a>
+                            <a name="supr" class="btn btn-danger" href="${rootPage}admin/delete-utilisateur?idUtilisateur=${utilisateur.id}" role="button">Suprimer</a>
                         </td>
                     </tr>
                 </c:forEach>

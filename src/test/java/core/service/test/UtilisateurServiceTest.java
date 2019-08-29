@@ -23,17 +23,17 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = SpringConfig.class)
-@Rollback(true)
+@Rollback(false)
 @Transactional
 public class UtilisateurServiceTest {
     
     @Autowired
     private UtilisateurService utilisateurService;
     
-//        @Test
-//        public void createUtilisateurOK() {
-//            utilisateurService.create(new Utilisateur("nom", "prenom", "mail", "motDePasse", "rue", "ville", "codePostal", "telephone"));       
-//        }   
+        @Test
+        public void createUtilisateurOK() {
+            utilisateurService.create(new Utilisateur("nom", "prenom", "mail", "motDePasse", "rue", "ville", "codePostal", "telephone"));       
+        }   
 //        
 //        @Test
 //        public void findOneByMailOK() {
