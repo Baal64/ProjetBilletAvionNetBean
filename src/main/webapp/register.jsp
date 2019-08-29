@@ -24,7 +24,7 @@
             <h2 class="login_soustitre">
                 Déja membre?
             </h2>
-            <a class="login_soustitre_href" href="./login.html">Cliquez ici: </a>
+            <a class="login_soustitre_href" href="./login">Cliquez ici: </a>
             <form method="post">
                 <p class="email">
                     <input name="nom" class="ipd" type="text" data-new-placeholder="Nom" placeholder="Nom" required>
@@ -79,7 +79,7 @@
 
 
             
-            <a class="a_mdp" href="./index.html">Quitter</a>
+            <a class="a_mdp" href="./home">Quitter</a>
         </section>
     </body>
 </html>

@@ -22,7 +22,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  *
  * @author itsadeki
  */
-@WebServlet(name = "LoginServlet", urlPatterns = {"/admin/"})
+@WebServlet(name = "LoginAdminServlet", urlPatterns = {"/admin/"})
 public class LoginServlet extends AutowireServlet {
 
     @Autowired

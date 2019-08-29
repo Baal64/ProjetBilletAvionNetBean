@@ -25,7 +25,7 @@
         <h2 class="login_soustitre">
             Pas encore membre?
         </h2>
-        <a class="login_soustitre_href" href="./projet-register.html">S'inscrire : </a>
+        <a class="login_soustitre_href" href="./register">S'inscrire : </a>
 
         <p>
             <input class="ipd" type="text" data-new-placeholder="Identifiant ou E-mail"
@@ -46,7 +46,7 @@
             <input type="checkbox" name="CSS" value="remenber_me" id="remenber_me" checked="checked" />
             Se souvenir de moi
         </p>
-        <a class="a_mdp" href="./index.html"> Identifiant ou mot de passe oublié? </a>
+        <a class="a_mdp" href="./home"> Identifiant ou mot de passe oublié? </a>
     </section>
 
 
