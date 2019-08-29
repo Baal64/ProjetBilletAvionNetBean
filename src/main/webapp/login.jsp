@@ -29,7 +29,7 @@
 
         <p>
             <input class="ipd" type="text" data-new-placeholder="E-mail"
-                placeholder="Identifiant ou E-mail">
+                placeholder="E-mail">
         </p>
         <p>
             <input class="ipd" type="text" data-new-placeholder="Mot de passe" placeholder="Mot de passe">
