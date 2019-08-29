@@ -11,8 +11,8 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item active">Vols</li>
-        <li class="breadcrumb-item active" aria-current="page"><a href="${rootPage}admin/vols">Liste</a></li>
-        <li class="breadcrumb-item active" aria-current="page"><a href="${rootPage}admin/vol">Enregistrement</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><a href="${rootPage}/admin/list-vol">Liste</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><a href="${rootPage}/admin/create-vol">Enregistrement</a></li>
     </ol>
 </nav>
 <section class="container">
@@ -27,10 +27,13 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Nom</th>
-                    <th scope="col">Prenom</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Profil</th>
+                    <th scope="col">Numero de vol</th>
+                    <th scope="col">places</th>
+                    <th scope="col">Date départ</th>
+                    <th scope="col">date arrivée</th>
+                    <th scope="col">ville de départ</th>
+                    <th scope="col">ville arrivée</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -38,8 +41,11 @@
                     <tr>
                         <th scope="row">${vol.id}</th>
                         <td>${vol.numeroVol}</td>
-                        <td>${vol.dateDepart}</td>
                         <td>${vol.nombrePlacesDisponibles}</td>
+                        <td>${vol.dateDepart}</td>
+                        <td>${vol.dateArrivee}</td>
+                        <td>${vol.villeDepart}</td>
+                        <td>${vol.villeArrivee}</td>
                         <td>
                             <a class="btn btn-primary" href="#" role="button">Modifier</a>
                         </td>
@@ -48,13 +54,6 @@
             </tbody>
         </table>
     </div>
-</section>
-<section class="container">
-        <ul>
-            <c:forEach items="${listeVols}" var="vol">
-                <li>${vol}</li>
-            </c:forEach>
-        </ul>
 </section>
 
 <c:import url="${rootPage}admin/views/footer.jsp"></c:import>

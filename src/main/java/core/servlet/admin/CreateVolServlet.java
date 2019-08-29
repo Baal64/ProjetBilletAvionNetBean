@@ -25,7 +25,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  *
  * @author alexa
  */
-@WebServlet(name = "VolServlet", urlPatterns = {"/admin/create-vol"})
+@WebServlet(name = "ListVolServlet", urlPatterns = {"/admin/create-vol"})
 public class CreateVolServlet extends AutowireServlet {
 
     @Autowired
@@ -79,7 +79,7 @@ public class CreateVolServlet extends AutowireServlet {
             nbrPlaces
         );
         
-        String route = AppUtil.rootbase + "/admin/create-vol";
+        String route = AppUtil.rootbase + "/admin/list-vol";
         vService.createVol(v);
         resp.sendRedirect(route);
     }    

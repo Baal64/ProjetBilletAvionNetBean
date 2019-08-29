@@ -48,10 +48,6 @@ public class Reservation implements Serializable {
         this.numeroReservation = numeroReservation;
         this.utilisateur = utilisateur;
     }
-
-    public Reservation(String numeroReservation, Utilisateur utilisateur, Vol vol, List<Passager> liste) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
     public Long getId() {
         return id;
