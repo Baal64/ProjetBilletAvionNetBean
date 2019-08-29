@@ -47,7 +47,7 @@
                         <td>${vol.villeDepart}</td>
                         <td>${vol.villeArrivee}</td>
                         <td>
-                            <a class="btn btn-primary" href="#" role="button">Modifier</a>
+                            <a class="btn btn-danger" href="${rootPage}/admin/delete-vol?idVol=${vol.id}" role="button">Supprimer</a>
                         </td>
                     </tr>
                 </c:forEach>

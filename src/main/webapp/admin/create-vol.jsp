@@ -90,7 +90,7 @@
                                         <span class="input-group-text">
                                             <i class="fas fa-users"></i>
                                         </span>
-                                        <input type="text" id="placeDispo" name="placeDispo" placeholder="Nombre de places du vol" class="form-control" required="true" value="">
+                                        <input type="number" id="placeDispo" name="placeDispo" placeholder="Nombre de places du vol" class="form-control" required="true" value="">
                                     </div>
                                 </div>
                             </div>
