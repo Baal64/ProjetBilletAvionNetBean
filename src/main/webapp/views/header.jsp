@@ -50,13 +50,13 @@
                     <ion-icon name="contact"></ion-icon>
                 </li>
                 <li id="header_top_item_login" class="header_top_item header_top_font">
-                    <a class="header_top_item_hover" href="./login.html">Login</a>
+                    <a class="header_top_item_hover" href="./login.jsp">Login</a>
                 </li>
                 <li id="header_top_item_slash" class="header_top_item header_top_font">
                     /
                 </li>
                 <li id="header_top_item_register" class="header_top_item header_top_font">
-                    <a class="header_top_item_hover" href="./projet-register.html">Register</a>
+                    <a class="header_top_item_hover" href="./register.jsp">Register</a>
                 </li>
             </ul>
             <nav id="header_nav" class="header_nav_init">
