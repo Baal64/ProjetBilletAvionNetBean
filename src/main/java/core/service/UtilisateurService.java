@@ -46,15 +46,18 @@ public class UtilisateurService {
 //        if (utilisateurDao.findOneByMail(u.getMail())!= null){
 //            throw new RuntimeException("mail deja existant");
 //        }
+//        
+//        // Erreur si identifiant existant
+//        if (utilisateurDao.findOneByNom(u.getNom())!= null){
+//            throw new RuntimeException("identifiant déja pris");    
+//        }
+//        // Erreur si mail existant
+//        if (utilisateurDao.findOneByMail(u.getMail())!= null){
+//            throw new RuntimeException("mail deja existant");
+//        }
         
-        // Erreur si identifiant existant
-        if (utilisateurDao.findOneByNom(u.getNom())!= null){
-            throw new RuntimeException("identifiant déja pris");    
-        }
-        // Erreur si mail existant
-        if (utilisateurDao.findOneByMail(u.getMail())!= null){
-            throw new RuntimeException("mail deja existant");
-        }
+        utilisateurDao.save(u);
+
     }
         
     public void modify(Utilisateur u){  
@@ -63,6 +66,10 @@ public class UtilisateurService {
     
     public void delete(Utilisateur u){   
         utilisateurDao.delete(u);
+    }
+    
+    public void delete(Long id){   
+        utilisateurDao.delete(id);
     }
     
     public Utilisateur findById(Long id) {   
