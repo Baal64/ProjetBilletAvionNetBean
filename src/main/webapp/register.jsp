@@ -27,39 +27,39 @@
             <a class="login_soustitre_href" href="./login.html">Cliquez ici: </a>
             <form method="post">
                 <p class="email">
-                    <input name="nom" class="ipd" type="text" data-new-placeholder="Nom" placeholder="Nom">
+                    <input name="nom" class="ipd" type="text" data-new-placeholder="Nom" placeholder="Nom" required>
                 </p>
 
                 <p >
-                    <input name="prenom" class="ipd" type="text" data-new-placeholder="Prénom" placeholder="Prénom">
+                    <input name="prenom" class="ipd" type="text" data-new-placeholder="Prénom" placeholder="Prénom" required>
                 </p>
 
                 <p >
-                    <input name="tel" class="ipd" type="text" data-new-placeholder="Téléphone" placeholder="Téléphone">
+                    <input name="tel" class="ipd" type="text" data-new-placeholder="Téléphone" placeholder="Téléphone" required>
                 </p>
 
                 <p >
-                    <input name="mail" class="ipd" type="email" data-new-placeholder="E-mail" placeholder="E-mail">
+                    <input name="mail" class="ipd" type="email" data-new-placeholder="E-mail" placeholder="E-mail" required>
                 </p>
 
                 <p >
-                    <input name="rue" class="ipd" type="text" data-new-placeholder="Rue" placeholder="Rue">
+                    <input name="rue" class="ipd" type="text" data-new-placeholder="Rue" placeholder="Rue" required>
                 </p>
 
                 <p >
-                    <input name="ville" class="ipd" type="text" data-new-placeholder="Ville" placeholder="Ville">
+                    <input name="ville" class="ipd" type="text" data-new-placeholder="Ville" placeholder="Ville" required>
                 </p>
 
                 <p >
-                    <input name="cp" class="ipd" type="text" data-new-placeholder="Code Postal" placeholder="Code Postal">
+                    <input name="cp" class="ipd" type="text" data-new-placeholder="Code Postal" placeholder="Code Postal" required>
                 </p>
 
                 <p>
-                    <input name="mdp1" class="ipd" type="text" data-new-placeholder="Mot de passe" placeholder="Mot de passe">
+                    <input name="mdp1" class="ipd" type="text" data-new-placeholder="Mot de passe" placeholder="Mot de passe" required>
                 </p>
 
                 <p>
-                    <input name="mdp2" class="ipd" type="text" data-new-placeholder="Ressaisir Mot de passe" placeholder="Ressaisir Mot de passe">
+                    <input name="mdp2" class="ipd" type="text" data-new-placeholder="Ressaisir Mot de passe" placeholder="Ressaisir Mot de passe" required>
                 </p>
 
                 <p class="p_button">

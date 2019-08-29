@@ -49,6 +49,8 @@ public class RegisterServlet extends AutowireServlet {
         
         // Enreg
         uService.create(u);
+        resp.sendRedirect("/app/home");
+        
     }
     
     
