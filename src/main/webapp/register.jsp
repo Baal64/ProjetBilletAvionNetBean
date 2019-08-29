@@ -18,7 +18,7 @@
         <title>register</title>
     </head>
     <body>
-        <section class="section_login">
+        <section class="section_register">
             <h1 id="login_titre">Enregistrez vous</h1>
 
             <h2 class="login_soustitre">

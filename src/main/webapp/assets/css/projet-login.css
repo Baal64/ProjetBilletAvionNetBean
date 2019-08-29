@@ -13,6 +13,17 @@ body{
     background-color: white;
     text-align: center;
     width: 420px;
+    height: 480px;
+    min-width: 200px;
+    margin: 60px auto;
+    padding: 20px;
+    
+}
+
+.section_register{
+    background-color: white;
+    text-align: center;
+    width: 420px;
     height: 900px;
     min-width: 200px;
     margin: 60px auto;
@@ -118,16 +129,7 @@ body{
     background-color: rgba(18, 118, 188, 1);
     height: 100vh;
 }
-.section_login{
-    background-color: white;
-    text-align: center;
-    width: 420px;
-    height: 900px;
-    min-width: 200px;
-    margin: 60px auto;
-    padding: 20px;
-    
-}
+
 
 .mon_compte{
     text-align: left;
